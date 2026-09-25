@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Week 9 Engagement Activity: Supervision Condition Analysis</title>
+</head>
+<body style="margin:0; padding:0; background-color:#FFFFFF; font-family:'Lato','Helvetica Neue',Arial,sans-serif; color:#000000;">
+<div style="max-width:900px; margin:0 auto; padding:20px; line-height:1.6;">
+
+  <!-- HEADER -->
+  <div style="background-color:#000000; padding:28px 32px; border-radius:4px; margin-bottom:24px;">
+    <p style="margin:0; color:#CFB87C; font-size:14px; letter-spacing:2px; text-transform:uppercase; font-weight:700;">Week 9 Engagement Activity</p>
+    <h1 style="margin:8px 0 0 0; color:#FFFFFF; font-size:26px; font-weight:700;">Supervision Condition Analysis</h1>
+  </div>
+
+  <!-- INSTRUCTIONS -->
+  <div style="background-color:#F7F5F0; border-left:6px solid #CFB87C; padding:18px 24px; margin-bottom:24px; border-radius:2px;">
+    <p style="margin:0 0 10px 0; font-size:16px;">Below are six conditions drawn from real, commonly used state supervision practice. For each one, decide (1) whether it primarily serves risk management, and (2) whether it risks creating a barrier to reintegration &mdash; housing, employment, or treatment. Then make a recommendation: <strong>retain, modify, or eliminate</strong>, with a brief justification. When you're done, use "Compare to the evidence" to check your reasoning against what the research literature actually says about that condition type.</p>
+    <p style="margin:0; font-size:16px;">This page is a working space and does not save your work. Copy your six ratings and recommendations into the submission document linked on the Week 9 assignment page.</p>
+  </div>
+
+  <!-- FRAMEWORK -->
+  <h2 style="color:#000000; font-size:20px; border-bottom:3px solid #CFB87C; padding-bottom:6px;">Working Definitions</h2>
+  <table style="width:100%; border-collapse:collapse; margin:14px 0 24px 0; font-size:14px;">
+    <tr style="background-color:#000000;">
+      <th style="color:#FFFFFF; text-align:left; padding:8px 12px;">Term</th>
+      <th style="color:#FFFFFF; text-align:left; padding:8px 12px;">What it means here</th>
+    </tr>
+    <tr style="background-color:#FFFFFF; border-bottom:1px solid #E0DCD0;">
+      <td style="padding:8px 12px; font-weight:700; vertical-align:top;">Risk management</td>
+      <td style="padding:8px 12px;">The condition exists to monitor or limit behavior directly tied to reoffending risk.</td>
+    </tr>
+    <tr style="background-color:#F7F5F0;">
+      <td style="padding:8px 12px; font-weight:700; vertical-align:top;">Reintegration barrier</td>
+      <td style="padding:8px 12px;">The condition makes it harder to keep a job, housing, or treatment appointment &mdash; regardless of whether it also manages risk.</td>
+    </tr>
+  </table>
+  <p style="font-size:14px; color:#5A5A5A; font-style:italic; margin-bottom:24px;">Note: a condition can do both, or neither, at the same time. That overlap is the point of this activity.</p>
+
+  <!-- CONDITION TEMPLATE (6 conditions) -->
+  <div id="conditions-container"></div>
+
+  <!-- GRAD EXTENSION -->
+  <div style="background-color:#000000; padding:22px 26px; border-radius:6px; margin-bottom:24px;">
+    <p style="margin:0 0 10px 0; color:#CFB87C; font-size:13px; letter-spacing:1.5px; text-transform:uppercase; font-weight:700;">Graduate Extension</p>
+    <p style="margin:0 0 14px 0; color:#FFFFFF; font-size:15px;">Using Bonta &amp; Andrews (2007) and at least one additional source from this week's readings, assess whether this six-condition set, taken as a whole, is consistent with the risk, need, and responsivity principles. Where does it align well? Where does it violate a specific RNR principle, and which one? Cite your sources.</p>
+    <textarea rows="6" style="width:100%; box-sizing:border-box; font-family:inherit; font-size:14px; padding:10px; border:1px solid #CFB87C; border-radius:4px;" placeholder="Write your extension response here, then copy it into your submission document."></textarea>
+  </div>
+
+  <p style="font-size:14px; color:#5A5A5A; font-style:italic;">Reminder: this page does not save your work. Copy your ratings, recommendations, and (if applicable) your graduate extension response into the submission document linked on the Week 9 assignment page before closing this tab.</p>
+
+</div>
+
+<script>
+(function () {
+  var GOLD = "#CFB87C";
+  var LIGHTGOLD = "#F7F5F0";
+
+  var conditions = [
+    {
+      id: "c1",
+      text: "\u201cMaintain full-time employment or enrollment in an approved education/training program at all times.\u201d",
+      evidence: "This condition targets a genuine criminogenic need \u2014 RNR literature identifies employment and education as core need domains. But research and practitioner reporting (CSG, 2019) document that a rigid, immediate full-time requirement is itself a common source of technical violations, since finding stable work takes time after release. A common expert recommendation: <strong>retain the underlying goal, modify the timeline</strong> \u2014 phase the requirement in over the first 60\u201390 days rather than requiring it from day one."
+    },
+    {
+      id: "c2",
+      text: "\u201cSubmit to random drug and alcohol testing as directed by the supervising officer.\u201d",
+      evidence: "Directly tied to a criminogenic need when substance use is part of someone's risk profile \u2014 well-aligned with RNR's need principle. The nuance is the <strong>responsivity principle</strong>: RNR research (Bonta &amp; Andrews, 2007) specifically warns that applying the same intensity of monitoring to low-risk individuals as to high-risk individuals can increase, not decrease, reoffending (\u201cover-servicing\u201d low-risk people). The evidence-based recommendation is usually <strong>retain, but scale testing frequency to assessed risk level</strong> rather than applying a flat standard to everyone."
+    },
+    {
+      id: "c3",
+      text: "\u201cObtain written permission from the supervising officer before changing residence or traveling outside the judicial district.\u201d",
+      evidence: "This is largely an administrative/monitoring condition rather than one tied to a specific criminogenic need. CSG's national violation data (2019) identifies unauthorized travel as one of the most common technical violation categories \u2014 and travel for a job interview, a funeral, or a family emergency can trigger a violation under a strict reading. The typical recommendation is <strong>modify</strong>: streamline the permission process (e.g., a fast-track or notification-only option for short trips) rather than eliminate oversight of residence changes entirely."
+    },
+    {
+      id: "c4",
+      text: "\u201cPay supervision fees and any court-ordered restitution according to an approved payment schedule.\u201d",
+      evidence: "This is the condition most directly criticized in the supervision-reform literature. CSG (2019) identifies fee-driven violations as a major driver of unnecessary incarceration \u2014 someone who cannot pay because of poverty is not exhibiting elevated reoffending risk, so this condition has no clear RNR justification; it is a resource barrier, not a behavioral one. Restitution to a specific victim is sometimes treated differently in the literature than general supervision fees. Many reform analysts recommend this condition be <strong>modified or eliminated</strong>, or at minimum that ability-to-pay be assessed before treating nonpayment as a violation."
+    },
+    {
+      id: "c5",
+      text: "\u201cComply with a curfew (e.g., remain at approved residence between 9:00 PM and 6:00 AM) as set by the supervising officer.\u201d",
+      evidence: "Curfews can serve a genuine risk-management purpose by limiting opportunity during high-risk hours, but CSG (2019) also identifies curfew violations as one of the most common technical violation types nationally \u2014 and a flat curfew can directly conflict with night-shift employment, the very thing Condition 1 is trying to encourage. The literature generally supports <strong>retain but modify</strong>: individualize curfew hours around a person's verified work schedule rather than applying a single default window to everyone."
+    },
+    {
+      id: "c6",
+      text: "\u201cAvoid contact with any person who has a felony record, including family members, without prior officer approval.\u201d",
+      evidence: "\u201cAntisocial associates\u201d is one of RNR's central criminogenic needs, so this condition has real theoretical grounding \u2014 but applied broadly enough to restrict contact with family members, it can directly undermine the family-reintegration research covered in Week 6, where family support is consistently identified as a protective factor. The responsivity principle would suggest a <strong>modify</strong> recommendation: narrow the restriction to specific co-offenders or documented negative influences rather than a blanket ban that could sweep in a parent, sibling, or spouse."
+    }
+  ];
+
+  var container = document.getElementById("conditions-container");
+
+  conditions.forEach(function (c, idx) {
+    var wrapper = document.createElement("div");
+    wrapper.style.border = "2px solid " + GOLD;
+    wrapper.style.borderRadius = "6px";
+    wrapper.style.padding = "22px 26px";
+    wrapper.style.marginBottom = "26px";
+
+    var heading = document.createElement("h3");
+    heading.style.margin = "0 0 10px 0";
+    heading.style.fontSize = "17px";
+    heading.textContent = "Condition " + (idx + 1);
+    wrapper.appendChild(heading);
+
+    var text = document.createElement("p");
+    text.style.margin = "0 0 14px 0";
+    text.style.fontSize = "15px";
+    text.style.backgroundColor = LIGHTGOLD;
+    text.style.padding = "12px 16px";
+    text.style.borderRadius = "4px";
+    text.textContent = c.text;
+    wrapper.appendChild(text);
+
+    // Risk management vs reintegration barrier ratings
+    ["Primary purpose", "Reintegration barrier risk"].forEach(function (label, i) {
+      var fieldset = document.createElement("fieldset");
+      fieldset.style.border = "none";
+      fieldset.style.padding = "0";
+      fieldset.style.margin = "0 0 12px 0";
+
+      var legend = document.createElement("legend");
+      legend.style.fontWeight = "700";
+      legend.style.fontSize = "14px";
+      legend.style.marginBottom = "6px";
+      legend.textContent = label;
+      fieldset.appendChild(legend);
+
+      var options = i === 0
+        ? ["Primarily risk management", "Primarily administrative", "Mixed / unclear"]
+        : ["Low", "Moderate", "High"];
+
+      options.forEach(function (opt) {
+        var lbl = document.createElement("label");
+        lbl.style.display = "block";
+        lbl.style.fontSize = "14px";
+        lbl.style.marginBottom = "4px";
+        var radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = c.id + "-" + (i === 0 ? "purpose" : "barrier");
+        radio.value = opt;
+        lbl.appendChild(radio);
+        lbl.appendChild(document.createTextNode(" " + opt));
+        fieldset.appendChild(lbl);
+      });
+      wrapper.appendChild(fieldset);
+    });
+
+    // Recommendation
+    var recFieldset = document.createElement("fieldset");
+    recFieldset.style.border = "none";
+    recFieldset.style.padding = "0";
+    recFieldset.style.margin = "0 0 12px 0";
+    var recLegend = document.createElement("legend");
+    recLegend.style.fontWeight = "700";
+    recLegend.style.fontSize = "14px";
+    recLegend.style.marginBottom = "6px";
+    recLegend.textContent = "Recommendation";
+    recFieldset.appendChild(recLegend);
+    ["Retain", "Modify", "Eliminate"].forEach(function (opt) {
+      var lbl = document.createElement("label");
+      lbl.style.display = "inline-block";
+      lbl.style.fontSize = "14px";
+      lbl.style.marginRight = "18px";
+      var radio = document.createElement("input");
+      radio.type = "radio";
+      radio.name = c.id + "-recommendation";
+      radio.value = opt;
+      lbl.appendChild(radio);
+      lbl.appendChild(document.createTextNode(" " + opt));
+      recFieldset.appendChild(lbl);
+    });
+    wrapper.appendChild(recFieldset);
+
+    // Justification textarea
+    var justLabel = document.createElement("label");
+    justLabel.style.display = "block";
+    justLabel.style.fontWeight = "700";
+    justLabel.style.fontSize = "14px";
+    justLabel.style.marginBottom = "6px";
+    justLabel.textContent = "Your justification (2\u20133 sentences):";
+    wrapper.appendChild(justLabel);
+
+    var textarea = document.createElement("textarea");
+    textarea.rows = 3;
+    textarea.placeholder = "What in the condition and its context supports your ratings and recommendation?";
+    textarea.style.width = "100%";
+    textarea.style.boxSizing = "border-box";
+    textarea.style.fontFamily = "inherit";
+    textarea.style.fontSize = "14px";
+    textarea.style.padding = "8px";
+    textarea.style.border = "1px solid " + GOLD;
+    textarea.style.borderRadius = "4px";
+    wrapper.appendChild(textarea);
+
+    // Reveal button
+    var revealId = "reveal-" + c.id;
+    var button = document.createElement("button");
+    button.type = "button";
+    button.textContent = "Compare to the evidence";
+    button.style.marginTop = "14px";
+    button.style.backgroundColor = "#000000";
+    button.style.color = GOLD;
+    button.style.border = "none";
+    button.style.padding = "10px 20px";
+    button.style.borderRadius = "4px";
+    button.style.fontSize = "14px";
+    button.style.fontWeight = "700";
+    button.style.cursor = "pointer";
+    wrapper.appendChild(button);
+
+    var revealPanel = document.createElement("div");
+    revealPanel.id = revealId;
+    revealPanel.style.display = "none";
+    revealPanel.style.marginTop = "14px";
+    revealPanel.style.backgroundColor = "#000000";
+    revealPanel.style.padding = "16px 20px";
+    revealPanel.style.borderRadius = "4px";
+    var revealText = document.createElement("p");
+    revealText.style.margin = "0";
+    revealText.style.color = "#FFFFFF";
+    revealText.style.fontSize = "14px";
+    revealText.innerHTML = c.evidence;
+    revealPanel.appendChild(revealText);
+    wrapper.appendChild(revealPanel);
+
+    button.addEventListener("click", function () {
+      revealPanel.style.display = (revealPanel.style.display === "block") ? "none" : "block";
+    });
+
+    container.appendChild(wrapper);
+  });
+})();
+</script>
+
+</body>
+</html>
